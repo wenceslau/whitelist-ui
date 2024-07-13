@@ -1,51 +1,76 @@
 # WhitelistUi
 
-ng new whitlist-ui
-ng serve or npm start
-- To test the creation
+## Steps
+**- ng new whitelist-ui**
 
-ng g m main
-	Rename folder to keep it on the top of the tree
-    import main module on app module
+**- ng serve or npm start**
+
+    To test the creation
+
+**- ng g m main** 
+
+    Rename folder to keep it on the top of the tree 
+    import main module on app module 
     import HttpClientModule, BrowserModule, BrowserAnimationsModule on main module
 
-	ng g c home
+**- ng g c home**
+
     Add router for home on app-routing
     Export home component on main module
-- delete content from app.component.html
-- Put the tag router-outlet on app.component.html
+    delete content from app.component.html
+    Put the tag router-outlet on app.component.html
 
+**- ng g s app**
 
-- create a folder @serives to keep all services together
-ng g s app 
+    create a folder @serives to keep all services together
+    Move the service app there
     Prepare the service app to execute all the http request
-    
 
-
-Node version 18.12.1
-Npm version 8.19.4
-Ng version 16.0.5
-	@angular-devkit/architect       0.1600.5
-	@angular-devkit/build-angular   16.0.5
-	@angular-devkit/core            16.0.5
-	@angular-devkit/schematics      16.0.5
-	@angular/cdk                    16.0.4
-	@angular/material               16.0.4
-	@schematics/angular             16.0.5	
-	rxjs                            7.8.1
-	typescript                      5.0.4
+## Versions and dependencies to install
+- Node version 18.12.1
+- Npm version 8.19.4
+- Ng version 16.0.5 (npm install -g @angular/cli@16)
+	- @angular-devkit/architect       0.1600.5
+	- @angular-devkit/build-angular   16.0.5
+	- @angular-devkit/core            16.0.5
+	- @angular-devkit/schematics      16.0.5
+	- @angular/cdk                    16.0.4
+	- @angular/material               16.0.4
+	- @schematics/angular             16.0.5	
+	- rxjs                            7.8.1
+	- typescript                      5.0.4
 	
-ng add @angular/material
-npm i @auth0/angular-jwt
+- ng add @angular/material
+- npm i @auth0/angular-jwt
+- npm install @angular/material
+- npm install @coreui/angular@
+- npm install @coreui/icons
+- npm install @coreui/icons-angular
 
-npm install @angular/material
-npm install @coreui/angular@
-npm install @coreui/icons
-npm install @coreui/icons-angular
-
-npm install @angular/flex-layout --save
+- npm install @angular/flex-layout --save
 
 
+## Errors solutions
+
+ng : File C:\Users\netowe\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ ng version
++ ~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+in this situation if is not possible to solve because of security policy
+
+you can use the commands with npx prefix
+
+npx ng version
+
+instead of
+
+ng version
+
+
+___
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
